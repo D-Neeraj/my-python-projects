@@ -1,0 +1,17 @@
+[
+    {
+        "role_id": 1,
+        "role_name": "Student",
+        "role_description": "Has the capabilities of student"
+    },
+    {
+        "role_id": 2,
+        "role_name": "Teacher",
+        "role_description": "Has the capabilities of Teacher"
+    },
+    {
+        "role_id": 3,
+        "role_name": "Parent",
+        "role_description": "Has the capabilities of Parent"
+    }
+]
