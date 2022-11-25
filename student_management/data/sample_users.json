@@ -5,7 +5,7 @@
         "age": 27,
         "gender": "Male",
         "address": "No.12, V.G.Rao nagar",
-        "relgion": "Christian",
+        "religion": "Christian",
         "caste": "Iyangaar",
         "dob": "1995-11-17",
         "role_id": 1
@@ -16,7 +16,7 @@
         "age": 27,
         "gender": "Male",
         "address": "No.12, V.G.Rao nagar",
-        "relgion": "Buddhist",
+        "religion": "Buddhist",
         "caste": "Dalit",
         "role_id": 2,
         "dob": "2005-11-17"

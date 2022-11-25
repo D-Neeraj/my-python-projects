@@ -11,6 +11,11 @@
     },
     {
         "role_id": 3,
+        "role_name": "Senior Teacher",
+        "role_description": "Has the capabilities of Teacher"
+    },
+    {
+        "role_id": 4,
         "role_name": "Parent",
         "role_description": "Has the capabilities of Parent"
     }

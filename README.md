@@ -6,7 +6,6 @@
 
 It is a student management system which helps to manage the student, teacher and their utilities.
 
-
 User - which is capable of manage the students, teachers and parents.
 
 * As a end-user I am able to register a user.
@@ -23,15 +22,40 @@ User - which is capable of manage the students, teachers and parents.
 * Phone Number
 * Address
 * Gender
-* Relgion
+* religion
 * Caste
-
 
 ## TODO
 
 #### Student Management Tasks
 
 * [X] Setup a virtual env for this project
-* [ ] Create a skeleton of this student management system
-* [ ] Create the models required for this system
-* [ ] Create a sample data for this system
+* [X] Create a skeleton of this student management system
+* [X] Create the models required for this system
+* [X] Create a sample data for this system
+
+##### Role Subtasks
+
+* [X] Load json file oninit
+* [X] Add behaviour of role
+* [X] Delete behaviour of role
+* [X] Fetch behaviour of role
+* [X] Update behaviour of role
+* [X] Search behaviour of role
+* [X] Format the input strings
+* [X] Document code
+
+##### User subtasks
+
+* [X] Load json file oninit
+* [X] Add behaviour of user
+* [X] Delete behaviour of user
+* [X] Fetch behaviour of user
+* [X] Update behaviour of user
+* [X] Search behaviour of user
+* [X] Format the input strings
+* [X] Document code
+* [ ] Manage input code for user role
+
+
+#### Test using pytest
