@@ -1,9 +1,11 @@
-from model.settings import Settings
-from model.user import User
-from model.user import Users
-
-
 # > This class provides a service for managing users
+import json
+
+from student_management.model.settings import Settings
+from student_management.model.user import Users, User
+from student_management.utils.file_writer import FileManager
+
+
 class UserService:
     def __init__(self):
         """
@@ -17,7 +19,7 @@ class UserService:
             print("Oops!", e, "occurred.")
             print("Next entry.")
 
-    def add_user(self, id, name, age, gender, address, religion, caste, role_id, dob):
+    def add_user(self, user: User):
         """
         It adds a user to the users list
 
@@ -31,19 +33,23 @@ class UserService:
         :param role_id: 1 for admin, 2 for user
         :param dob: date of birth
         :return: The users list is being returned.
+        @param user:
         """
         user = User(
-            id=id,
-            name=name,
-            age=age,
-            gender=gender,
-            address=address,
-            religion=religion,
-            caste=caste,
-            role_id=role_id,
-            dob=dob)
+            id=user.id,
+            name=user.name,
+            age=user.age,
+            gender=user.gender,
+            address=user.address,
+            religion=user.religion,
+            caste=user.caste,
+            role_id=user.role_id,
+            dob=str(user.dob))
+
         self.users.__root__.append(user)
-        return self.users
+        # write users to json
+        FileManager.write_json(self.users)
+        return self.users.__root__
 
     def delete_user(self, id):
         """
@@ -56,31 +62,23 @@ class UserService:
         del self.users.__root__[selected_users[0]]
         return self.users
 
-    def update_user(self, id, name, age, gender, address, religion, caste, role_id, dob):
+    def update_user(self, user: User):
         """
         It takes the id of the user to be updated, and the new values for the other attributes of the user, and updates the
         user with the new values
 
-        :param id: The id of the user to be updated
-        :param name: Name of the user
-        :param age: int
-        :param gender: 1 for male, 2 for female
-        :param address: The address of the user
-        :param religion: Hindu, Muslim, Christian, Sikh, Buddhist, Jain, Parsi, Other
-        :param caste: The caste of the user
-        :param role_id: 1 for admin, 2 for user
-        :param dob: date of birth
         :return: The updated user object is being returned.
+        @param user:
         """
-        selected_users = [index for index, user in enumerate(self.users.__root__) if user.id == int(id)]
-        self.users.__root__[selected_users[0]].name = name
-        self.users.__root__[selected_users[0]].age = age
-        self.users.__root__[selected_users[0]].gender = gender
-        self.users.__root__[selected_users[0]].address = address
-        self.users.__root__[selected_users[0]].religion = religion
-        self.users.__root__[selected_users[0]].caste = caste
-        self.users.__root__[selected_users[0]].role_id = role_id
-        self.users.__root__[selected_users[0]].dob = dob
+        selected_users = [index for index, user in enumerate(self.users.__root__) if user.id == int(user.id)]
+        self.users.__root__[selected_users[0]].name = user.name
+        self.users.__root__[selected_users[0]].age = user.age
+        self.users.__root__[selected_users[0]].gender = user.gender
+        self.users.__root__[selected_users[0]].address = user.address
+        self.users.__root__[selected_users[0]].religion = user.religion
+        self.users.__root__[selected_users[0]].caste = user.caste
+        self.users.__root__[selected_users[0]].role_id = user.role_id
+        self.users.__root__[selected_users[0]].dob = user.dob
         return self.users
 
     def search_user(self, search_string):

@@ -13,7 +13,7 @@ class View:
         :return: A string is being returned.
         """
 
-        return Settings.select_role_option_text
+        return Settings().select_role_option_text
 
     @staticmethod
     def display_welcome_sms():
@@ -21,7 +21,7 @@ class View:
         It returns a string that contains a welcome message for the user
         :return: A string
         """
-        return Settings.welcome_sms_text
+        return Settings().welcome_sms_text
 
     @staticmethod
     def display_select_user_option():
@@ -29,7 +29,7 @@ class View:
         It displays a menu of options to the user.
         :return: A string is being returned.
         """
-        return Settings.select_user_option_text
+        return Settings().select_user_option_text
 
     @staticmethod
     def get_application_inputs():

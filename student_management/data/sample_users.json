@@ -1,24 +1,46 @@
 [
-    {
-        "id": 1,
-        "name": "Neeraj Dhayalan",
-        "age": 27,
-        "gender": "Male",
-        "address": "No.12, V.G.Rao nagar",
-        "religion": "Christian",
-        "caste": "Iyangaar",
-        "dob": "1995-11-17",
-        "role_id": 1
-    },
-    {
-        "id": 2,
-        "name": "Rajaraman Ekambaram",
-        "age": 27,
-        "gender": "Male",
-        "address": "No.12, V.G.Rao nagar",
-        "religion": "Buddhist",
-        "caste": "Dalit",
-        "role_id": 2,
-        "dob": "2005-11-17"
-    }
+  {
+    "id": 1,
+    "name": "Neeraj Dhayalan",
+    "age": 27,
+    "gender": "Male",
+    "address": "No.12, V.G.Rao nagar",
+    "religion": null,
+    "caste": "Iyangaar",
+    "role_id": 1,
+    "dob": "1995-11-17"
+  },
+  {
+    "id": 2,
+    "name": "Rajaraman Ekambaram",
+    "age": 27,
+    "gender": "Male",
+    "address": "No.12, V.G.Rao nagar",
+    "religion": null,
+    "caste": "Dalit",
+    "role_id": 2,
+    "dob": "2005-11-17"
+  },
+  {
+    "id": 1,
+    "name": "Saravan",
+    "age": 27,
+    "gender": "Male",
+    "address": "lkajsdlksd",
+    "religion": "alsdas",
+    "caste": "asdas",
+    "role_id": 3,
+    "dob": "1995-11-26"
+  },
+  {
+    "id": 3,
+    "name": "Saravan",
+    "age": 27,
+    "gender": "Male",
+    "address": "lkajsdlksd",
+    "religion": "alsdas",
+    "caste": "asdas",
+    "role_id": 3,
+    "dob": "1995-11-26"
+  }
 ]

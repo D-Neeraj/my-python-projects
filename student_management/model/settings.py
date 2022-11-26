@@ -16,7 +16,7 @@ class Settings(BaseSettings):
                     4. Search Role\n
                     5. Fetch Role\n
                     6. Exit"""
-    welcome_sms_text = f"""
+    welcome_sms_text = """
                 f"{4 * '*'} Student Management System {4 * '*'}"
                     Please select the below option:  \n
                     1. Manage Role \n

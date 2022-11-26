@@ -1,10 +1,12 @@
-from model.settings import Settings
-from model.role import Roles
-from model.role import Role
+
 
 
 # > This class is responsible for managing roles
-class RoleService():
+from student_management.model.role import Roles, Role
+from student_management.model.settings import Settings
+
+
+class RoleService:
 
     def __init__(self):
         """
